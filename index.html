@@ -1,0 +1,72 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <title>Мобильный банк | ФинКонтроль</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-container">
+  
+    <div class="bank-header">
+        <div class="bank-name">
+            <h1>Fin<span style="font-weight:400;">Bank</span></h1>
+            <div class="bank-badge">Premium Lite</div>
+        </div>
+        <div class="balance-card">
+            <div class="balance-label">Текущий баланс карты</div>
+            <div class="balance-amount">45 280 <span>₽</span></div>
+            <div style="font-size:0.7rem; margin-top:8px; opacity:0.7;">• Счёт RUB • Доступно</div>
+        </div>
+    </div>
+
+  
+    <div class="total-block">
+        <span class="total-label">📊 Всего расходов (фильтр)</span>
+        <span class="total-value" id="totalAmount">0 ₽</span>
+    </div>
+
+ 
+    <div class="filter-bar" id="filterBar">
+        <button data-cat="all" class="filter-btn active">Показать всё</button>
+        <button data-cat="Питание" class="filter-btn">🍽️ Питание</button>
+        <button data-cat="Дорога" class="filter-btn">🚗 Дорога</button>
+        <button data-cat="Досуг" class="filter-btn">🎬 Досуг</button>
+    </div>
+
+   
+    <div class="add-form">
+        <div class="form-title">➕ Новая покупка</div>
+        <div class="form-row">
+            <div class="form-field">
+                <select id="expenseCategory">
+                    <option value="Питание">Питание</option>
+                    <option value="Дорога">Дорога</option>
+                    <option value="Досуг">Досуг</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <input type="number" id="expenseSum" placeholder="Сумма, ₽" step="0.01" min="0.01">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-field">
+                <input type="date" id="expenseDate" value="">
+            </div>
+            <div class="form-field">
+                <input type="text" id="expenseDesc" placeholder="Описание (например, кофе)">
+            </div>
+        </div>
+        <button class="btn-add" id="addExpenseBtn">➕ Добавить расход</button>
+    </div>
+
+  
+    <div id="expensesContainer" class="expenses-list">
+       
+    </div>
+    <footer>Безопасные операции • Контроль бюджета</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
