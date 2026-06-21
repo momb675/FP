@@ -46,5 +46,4 @@
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/username/budget-tracker.git
-cd budget-tracker
+git clone https://github.com/momb675/FP.git
